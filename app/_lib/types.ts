@@ -18,6 +18,9 @@ export interface Dhikr {
   count: number; // target count; 0 = continuous
   type: DhikrType;
   isFavorite?: boolean;
+  routineId?: string;
+  routineEmoji?: string;
+  order?: number;
 }
 
 export type RoutineId = 'morning' | 'daytime' | 'evening' | 'night';
