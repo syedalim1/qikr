@@ -1,0 +1,28 @@
+# Qikr Project Rules
+
+- This is a Dhikr routine tracker application.
+- Work only inside the existing Next.js project.
+- Do not recreate the project from scratch.
+- Preserve existing working code unless a change is required.
+- Build incrementally.
+- Mobile-first UI is mandatory.
+- UI must be premium, minimal, clean, peaceful and modern.
+- Main focus is the Dhikr counting experience.
+- Support Tamil, Arabic and English.
+- Arabic content must use proper RTL layout.
+- Fixed Dhikr counts must decrement correctly to 0 and then automatically move to the next Dhikr.
+- Counts must never become negative.
+- Continuous Dhikr must use an upward counter with no maximum.
+- Continue must restore unfinished sessions.
+- Progress must be persisted locally.
+- Future database integration must use a local-first architecture.
+- Do not write to the server database on every counter tap.
+- Do not create fake buttons or placeholder core functionality.
+- Keep religious content fields separate: Arabic, Tamil, English, pronunciation, meaning and source/reference.
+- Do not silently rewrite supplied religious content.
+- Keep the code clean, reusable and maintainable.
+- Avoid unnecessary dependencies and unnecessary complexity.
+- Do not perform full browser testing or long QA verification unless explicitly requested.
+- Only perform minimal build/code validation when needed.
+- I will personally verify the application.
+- Prioritize implementation speed and clean working functionality.

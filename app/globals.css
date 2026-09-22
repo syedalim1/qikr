@@ -1,8 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap");
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Design Tokens ──────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9fafb;
+  --foreground: #111827;
+  --surface: #ffffff;
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --accent: #059669;
+  --accent-light: #d1fae5;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --surface: #18181b;
+  --border: #27272a;
+  --muted: #71717a;
+  --accent: #10b981;
+  --accent-light: #052e16;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -10,17 +31,81 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-arabic: "Amiri", "Noto Naskh Arabic", "Traditional Arabic", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ─── Base ───────────────────────────────────────────────────────────────── */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Arabic Typography ──────────────────────────────────────────────────── */
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+[lang="ar"],
+[dir="rtl"] {
+  font-family: var(--font-arabic);
+  line-height: 2.2;
+  letter-spacing: 0;
+}
+
+/* ─── Tamil Readability ──────────────────────────────────────────────────── */
+[lang="ta"] {
+  font-family: "Latha", "Vijaya", "Tamil Sangam MN", var(--font-sans), sans-serif;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+/* ─── Smooth transitions ─────────────────────────────────────────────────── */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* ─── Safe area for mobile ───────────────────────────────────────────────── */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* ─── Counter button animation ───────────────────────────────────────────── */
+@keyframes tap-pulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.counter-tap {
+  animation: tap-pulse 120ms ease-out;
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
 }
