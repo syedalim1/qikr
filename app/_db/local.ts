@@ -10,7 +10,7 @@ import type {
 } from '../_lib/types';
 import { routines } from '../_lib/data';
 
-export const SEED_VERSION = 1;
+export const SEED_VERSION = 2;
 
 export interface LocalSyncEvent {
   eventId: string;
@@ -112,8 +112,10 @@ export async function initializeLocalDatabase(): Promise<void> {
   try {
     await db.open();
 
-    const count = await db.cachedRoutines.count();
-    if (count === 0) {
+    const firstCached = await db.cachedRoutines.toCollection().first();
+    const needsUpdate = !firstCached || (firstCached.version ?? 0) < SEED_VERSION;
+
+    if (needsUpdate) {
       const now = new Date().toISOString();
       const records: CachedRoutineRecord[] = routines.map((r) => ({
         id: r.id,
