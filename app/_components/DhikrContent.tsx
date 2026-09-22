@@ -37,7 +37,7 @@ export default function DhikrContent({
         <p
           dir="rtl"
           lang="ar"
-          className={`${s.arabic} leading-loose font-arabic text-zinc-900 dark:text-zinc-50`}
+          className={`${s.arabic} leading-loose font-arabic text-zinc-900 dark:text-zinc-50 whitespace-pre-line break-words`}
         >
           {arabic}
         </p>
@@ -45,28 +45,28 @@ export default function DhikrContent({
 
       {/* Selected language content (non-Arabic) */}
       {language !== 'ar' && (
-        <p className={`${s.content} leading-relaxed text-zinc-700 dark:text-zinc-300`}>
+        <p className={`${s.content} leading-relaxed text-zinc-700 dark:text-zinc-300 whitespace-pre-line break-words`}>
           {language === 'ta' ? content.tamil : content.english}
         </p>
       )}
 
       {/* Pronunciation */}
       {showPronunciation && content.pronunciation && !isArabic && (
-        <p className={`${s.sub} text-zinc-400 dark:text-zinc-500 italic`}>
+        <p className={`${s.sub} text-zinc-400 dark:text-zinc-500 italic whitespace-pre-line break-words`}>
           {content.pronunciation}
         </p>
       )}
 
       {/* Meaning */}
       {showMeaning && content.meaning && (
-        <p className={`${s.sub} text-zinc-500 dark:text-zinc-400`}>
+        <p className={`${s.sub} text-zinc-500 dark:text-zinc-400 whitespace-pre-line break-words`}>
           {content.meaning}
         </p>
       )}
 
       {/* Source */}
       {showSource && content.source && (
-        <p className={`text-xs text-zinc-400 dark:text-zinc-600`}>
+        <p className={`text-xs text-zinc-400 dark:text-zinc-600 whitespace-pre-line break-words`}>
           — {content.source}
         </p>
       )}

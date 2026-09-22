@@ -260,19 +260,25 @@ function PlayerInner({ routineId, initialDhikrIndex, initialSession }: PlayerInn
           <p
             dir="rtl"
             lang="ar"
-            className="text-3xl font-arabic text-zinc-900 dark:text-zinc-50 leading-loose"
+            className={`${
+              content.arabic.length > 500
+                ? 'text-xl sm:text-2xl'
+                : content.arabic.length > 150
+                ? 'text-2xl sm:text-3xl'
+                : 'text-3xl sm:text-4xl'
+            } font-arabic text-zinc-900 dark:text-zinc-50 leading-loose whitespace-pre-line break-words`}
           >
             {content.arabic}
           </p>
 
           {language !== 'ar' && (
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-3 leading-relaxed px-2">
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 mt-4 leading-relaxed px-2 whitespace-pre-line break-words">
               {language === 'ta' ? content.tamil : content.english}
             </p>
           )}
 
           {content.pronunciation && language !== 'ar' && (
-            <p className="text-xs text-zinc-400 dark:text-zinc-600 italic mt-2">
+            <p className="text-xs sm:text-sm text-zinc-400 dark:text-zinc-500 italic mt-3 leading-relaxed whitespace-pre-line break-words">
               {content.pronunciation}
             </p>
           )}
@@ -282,13 +288,13 @@ function PlayerInner({ routineId, initialDhikrIndex, initialSession }: PlayerInn
               {content.meaning && (
                 <div className="mb-3">
                   <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1">Meaning</p>
-                  <p className="text-sm text-zinc-700 dark:text-zinc-300">{content.meaning}</p>
+                  <p className="text-sm text-zinc-700 dark:text-zinc-300 whitespace-pre-line break-words">{content.meaning}</p>
                 </div>
               )}
               {content.source && (
                 <div>
                   <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1">Source</p>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">{content.source}</p>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 whitespace-pre-line break-words">{content.source}</p>
                 </div>
               )}
             </div>
