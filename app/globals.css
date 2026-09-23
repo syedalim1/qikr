@@ -109,3 +109,27 @@ body {
   background: var(--border);
   border-radius: 999px;
 }
+
+/* ─── Quran Reader Page Transitions ──────────────────────────────────────── */
+@keyframes quranSlideOutLeft {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-40px); }
+}
+@keyframes quranSlideOutRight {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(40px); }
+}
+@keyframes quranSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quran-slide-out-left {
+  animation: quranSlideOutLeft 0.25s ease-in forwards;
+}
+.quran-slide-out-right {
+  animation: quranSlideOutRight 0.25s ease-in forwards;
+}
+.quran-slide-in {
+  animation: quranSlideIn 0.2s ease-out;
+}

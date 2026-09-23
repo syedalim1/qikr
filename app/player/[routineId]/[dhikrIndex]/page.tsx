@@ -8,6 +8,7 @@ import { getRoutineById } from '../../../_lib/data';
 import { getSession, isFavorite, toggleFavorite, getSettings } from '../../../_lib/store';
 import { useSession, createNewSession } from '../../../_lib/useSession';
 import { useLanguage } from '../../../_components/LanguageContext';
+import QuranReader from '../../../_components/QuranReader';
 import type { SessionProgress } from '../../../_lib/types';
 
 // ─── Player Inner ──────────────────────────────────────────────────────────
@@ -162,6 +163,25 @@ function PlayerInner({ routineId, initialDhikrIndex, initialSession }: PlayerInn
       : dhikr.title.english;
 
   const content = dhikr.content;
+
+  // ─── Full Surah mode: paginated Quran reader ─────────────────────────
+  const isFullSurah = dhikr.count === 1 && content.arabic && content.arabic.length > 500;
+
+  if (isFullSurah) {
+    return (
+      <QuranReader
+        surahTitle={dhikr.title}
+        arabicText={content.arabic}
+        routineEmoji={routine.emoji}
+        onComplete={() => {
+          handleTapWithFeedback();
+        }}
+        onClose={() => {
+          router.push(`/routine/${routineId}`);
+        }}
+      />
+    );
+  }
 
   return (
     <div className="fixed inset-0 bg-zinc-50 dark:bg-zinc-950 flex flex-col overflow-hidden">
