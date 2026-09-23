@@ -134,6 +134,7 @@ export default function FavoritesPage() {
                       >
                         {title}
                       </p>
+                    {isRtl ? (
                       <p
                         dir="rtl"
                         lang="ar"
@@ -141,6 +142,13 @@ export default function FavoritesPage() {
                       >
                         {dhikr.content.arabic}
                       </p>
+                    ) : (
+                      <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-1">
+                        {language === 'ta'
+                          ? dhikr.content.tamilPronunciation || dhikr.content.pronunciation
+                          : dhikr.content.pronunciation}
+                      </p>
+                    )}
                     </div>
                     <button
                       onClick={(e) => handleToggle(e, dhikr.id)}

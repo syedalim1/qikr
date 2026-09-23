@@ -6,7 +6,8 @@ export interface DhikrContent {
   arabic: string;
   tamil: string;
   english: string;
-  pronunciation?: string;
+  pronunciation?: string; // English transliteration
+  tamilPronunciation?: string; // Tamil transliteration
   meaning?: string;
   source?: string;
 }

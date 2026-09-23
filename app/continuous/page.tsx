@@ -208,24 +208,27 @@ export default function ContinuousPage() {
         })}
       </div>
 
-      {/* Arabic text */}
+      {/* Dhikr text (language-aware) */}
       <div className="text-center mb-8 px-2">
-        <p
-          dir="rtl"
-          lang="ar"
-          className="text-3xl font-arabic text-zinc-900 dark:text-zinc-50 leading-loose mb-2 whitespace-pre-line break-words"
-        >
-          {dhikr.content.arabic}
-        </p>
-        {language !== 'ar' && (
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed whitespace-pre-line break-words">
-            {language === 'ta' ? dhikr.content.tamil : dhikr.content.english}
+        {language === 'ar' ? (
+          <p
+            dir="rtl"
+            lang="ar"
+            className="text-3xl font-arabic text-zinc-900 dark:text-zinc-50 leading-loose mb-2 whitespace-pre-line break-words"
+          >
+            {dhikr.content.arabic}
           </p>
-        )}
-        {dhikr.content.pronunciation && language !== 'ar' && (
-          <p className="text-xs text-zinc-400 dark:text-zinc-600 italic mt-1 whitespace-pre-line break-words">
-            {dhikr.content.pronunciation}
-          </p>
+        ) : (
+          <>
+            <p className="text-2xl text-zinc-900 dark:text-zinc-50 leading-relaxed mb-2 whitespace-pre-line break-words font-medium">
+              {language === 'ta'
+                ? dhikr.content.tamilPronunciation || dhikr.content.pronunciation
+                : dhikr.content.pronunciation}
+            </p>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed whitespace-pre-line break-words">
+              {language === 'ta' ? dhikr.content.tamil : dhikr.content.english}
+            </p>
+          </>
         )}
         {dhikr.content.meaning && (
           <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2 px-4 whitespace-pre-line break-words">

@@ -164,8 +164,26 @@ function PlayerInner({ routineId, initialDhikrIndex, initialSession }: PlayerInn
 
   const content = dhikr.content;
 
-  // ─── Full Surah mode: paginated Quran reader ─────────────────────────
-  const isFullSurah = dhikr.count === 1 && content.arabic && content.arabic.length > 500;
+  // Primary text: Arabic for 'ar', Tamil transliteration for 'ta', English transliteration for 'en'
+  const primaryText =
+    language === 'ar'
+      ? content.arabic
+      : language === 'ta'
+      ? content.tamilPronunciation || content.pronunciation
+      : content.pronunciation;
+
+  // Translation text: empty for 'ar', Tamil meaning for 'ta', English meaning for 'en'
+  const translationText =
+    language === 'ar'
+      ? null
+      : language === 'ta'
+      ? content.tamil
+      : content.english;
+
+  const isRtl = language === 'ar';
+
+  // ─── Full Surah mode: paginated Quran reader (Arabic only) ─────────
+  const isFullSurah = language === 'ar' && dhikr.count === 1 && content.arabic && content.arabic.length > 500;
 
   if (isFullSurah) {
     return (
@@ -274,32 +292,26 @@ function PlayerInner({ routineId, initialDhikrIndex, initialSession }: PlayerInn
         </h2>
       </div>
 
-      {/* ─── Arabic text + translation ───────────────────────────────── */}
+      {/* ─── Dhikr content ────────────────────────────────────────────── */}
       <div className="flex-1 flex flex-col items-center justify-start px-6 overflow-y-auto min-h-0">
         <div className="w-full text-center pt-2 pb-4">
           <p
-            dir="rtl"
-            lang="ar"
+            dir={isRtl ? 'rtl' : 'ltr'}
+            lang={isRtl ? 'ar' : undefined}
             className={`${
-              content.arabic.length > 500
+              (primaryText || '').length > 500
                 ? 'text-xl sm:text-2xl'
-                : content.arabic.length > 150
+                : (primaryText || '').length > 150
                 ? 'text-2xl sm:text-3xl'
                 : 'text-3xl sm:text-4xl'
-            } font-arabic text-zinc-900 dark:text-zinc-50 leading-loose whitespace-pre-line break-words`}
+            } ${isRtl ? 'font-arabic leading-loose' : 'font-medium leading-relaxed'} text-zinc-900 dark:text-zinc-50 whitespace-pre-line break-words`}
           >
-            {content.arabic}
+            {primaryText}
           </p>
 
-          {language !== 'ar' && (
+          {translationText && (
             <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 mt-4 leading-relaxed px-2 whitespace-pre-line break-words">
-              {language === 'ta' ? content.tamil : content.english}
-            </p>
-          )}
-
-          {content.pronunciation && language !== 'ar' && (
-            <p className="text-xs sm:text-sm text-zinc-400 dark:text-zinc-500 italic mt-3 leading-relaxed whitespace-pre-line break-words">
-              {content.pronunciation}
+              {translationText}
             </p>
           )}
 

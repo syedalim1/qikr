@@ -5,7 +5,6 @@ import { useLanguage } from './LanguageContext';
 
 interface Props {
   content: DhikrContentType;
-  showPronunciation?: boolean;
   showMeaning?: boolean;
   showSource?: boolean;
   size?: 'sm' | 'md' | 'lg';
@@ -13,51 +12,60 @@ interface Props {
 
 export default function DhikrContent({
   content,
-  showPronunciation = true,
   showMeaning = false,
   showSource = false,
   size = 'md',
 }: Props) {
   const { language } = useLanguage();
 
-  const arabic = content.arabic;
-  const isArabic = language === 'ar';
-
   const textSizes = {
-    sm: { arabic: 'text-2xl', content: 'text-base', sub: 'text-xs' },
-    md: { arabic: 'text-3xl', content: 'text-lg', sub: 'text-sm' },
-    lg: { arabic: 'text-4xl', content: 'text-xl', sub: 'text-sm' },
+    sm: { primary: 'text-2xl', translation: 'text-base', sub: 'text-sm' },
+    md: { primary: 'text-3xl', translation: 'text-lg', sub: 'text-sm' },
+    lg: { primary: 'text-4xl', translation: 'text-xl', sub: 'text-sm' },
   };
   const s = textSizes[size];
 
+  // Primary text: Arabic for 'ar', Tamil transliteration for 'ta', English transliteration for 'en'
+  const primaryText =
+    language === 'ar'
+      ? content.arabic
+      : language === 'ta'
+      ? content.tamilPronunciation || content.pronunciation // fallback to English pronunciation if Tamil isn't provided yet
+      : content.pronunciation;
+
+  // Translation text: empty for 'ar', Tamil meaning for 'ta', English meaning for 'en'
+  const translationText =
+    language === 'ar'
+      ? null
+      : language === 'ta'
+      ? content.tamil
+      : content.english;
+
+  const isRtl = language === 'ar';
+
   return (
     <div className="flex flex-col gap-3 text-center">
-      {/* Always show Arabic text */}
-      {arabic && (
+      {/* Primary Dhikr text */}
+      {primaryText && (
         <p
-          dir="rtl"
-          lang="ar"
-          className={`${s.arabic} leading-loose font-arabic text-zinc-900 dark:text-zinc-50 whitespace-pre-line break-words`}
+          dir={isRtl ? 'rtl' : 'ltr'}
+          lang={isRtl ? 'ar' : undefined}
+          className={`${s.primary} ${
+            isRtl ? 'leading-loose font-arabic' : 'leading-relaxed font-medium'
+          } text-zinc-900 dark:text-zinc-50 whitespace-pre-line break-words`}
         >
-          {arabic}
+          {primaryText}
         </p>
       )}
 
-      {/* Selected language content (non-Arabic) */}
-      {language !== 'ar' && (
-        <p className={`${s.content} leading-relaxed text-zinc-700 dark:text-zinc-300 whitespace-pre-line break-words`}>
-          {language === 'ta' ? content.tamil : content.english}
+      {/* Translation */}
+      {translationText && (
+        <p className={`${s.translation} leading-relaxed text-zinc-600 dark:text-zinc-400 whitespace-pre-line break-words`}>
+          {translationText}
         </p>
       )}
 
-      {/* Pronunciation */}
-      {showPronunciation && content.pronunciation && !isArabic && (
-        <p className={`${s.sub} text-zinc-400 dark:text-zinc-500 italic whitespace-pre-line break-words`}>
-          {content.pronunciation}
-        </p>
-      )}
-
-      {/* Meaning */}
+      {/* Meaning description (extra context) */}
       {showMeaning && content.meaning && (
         <p className={`${s.sub} text-zinc-500 dark:text-zinc-400 whitespace-pre-line break-words`}>
           {content.meaning}

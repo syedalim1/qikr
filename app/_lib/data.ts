@@ -1,4 +1,4 @@
-import type { Routine } from './types';
+import type { Routine, Dhikr } from './types';
 
 export const routines: Routine[] = [
   {
@@ -618,7 +618,7 @@ export const routines: Routine[] = [
   }
 ];
 
-export const continuousDhikrs = [
+export const continuousDhikrs: Dhikr[] = [
   {
     "id": "cont-1",
     "type": "continuous",

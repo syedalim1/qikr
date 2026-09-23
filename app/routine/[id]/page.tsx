@@ -257,11 +257,17 @@ export default function RoutineDetailPage({ params }: PageProps<'/routine/[id]'>
                       {dhikrTitle}
                     </p>
                     <p
-                      dir="rtl"
-                      lang="ar"
-                      className="text-lg font-arabic text-zinc-600 dark:text-zinc-400 leading-loose line-clamp-2 mb-2"
+                      dir={isRtl ? 'rtl' : 'ltr'}
+                      lang={isRtl ? 'ar' : undefined}
+                      className={`${
+                        isRtl ? 'text-lg font-arabic leading-loose' : 'text-sm font-medium leading-relaxed'
+                      } text-zinc-600 dark:text-zinc-400 line-clamp-2 mb-2`}
                     >
-                      {dhikr.content.arabic}
+                      {isRtl
+                        ? dhikr.content.arabic
+                        : language === 'ta'
+                        ? dhikr.content.tamilPronunciation || dhikr.content.pronunciation
+                        : dhikr.content.pronunciation}
                     </p>
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-0.5 rounded-full">
