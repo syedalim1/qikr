@@ -179,6 +179,7 @@ const routineTitles: Record<RoutineId, string> = {
   daytime: 'Daytime Dhikr',
   evening: 'Evening Dhikr',
   night: 'Night Dhikr',
+  latenight: 'Isha Dhikr',
 };
 
 /**

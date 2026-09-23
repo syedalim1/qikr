@@ -122,6 +122,7 @@ export async function checkDueReminders(): Promise<void> {
           daytime: 'Daytime Dhikr Time',
           evening: 'Evening Dhikr Time',
           night: 'Night Dhikr Time',
+          latenight: 'Isha Dhikr Time',
         };
 
         const title = routineNames[sched.routineId] || 'Dhikr Time';

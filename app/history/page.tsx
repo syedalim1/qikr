@@ -71,6 +71,7 @@ const routineEmojis: Record<RoutineId, string> = {
   daytime: '☀️',
   evening: '🌇',
   night: '🌆',
+  latenight: '🌌',
 };
 
 function getRoutineLabel(routineId: RoutineId, lang: 'ta' | 'ar' | 'en'): string {

@@ -8,7 +8,7 @@ import { getRawSession, clearSession } from '../_lib/store';
 import { useLanguage } from '../_components/LanguageContext';
 import type { SessionProgress } from '../_lib/types';
 
-const routineOrder = ['morning', 'daytime', 'evening', 'night'];
+const routineOrder = ['morning', 'daytime', 'evening', 'night', 'latenight'];
 
 const messages = {
   ta: {

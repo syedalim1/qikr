@@ -426,6 +426,195 @@ export const routines: Routine[] = [
         }
       }
     ]
+  },
+  {
+    "id": "latenight",
+    "emoji": "🌌",
+    "title": {
+      "arabic": "أذكار العشاء",
+      "tamil": "இஷா அல்டிமேட் ரூட்டீன்",
+      "english": "Isha Ultimate Routine",
+      "pronunciation": "Adhkar al-Isha"
+    },
+    "recommendedTime": "After Isha",
+    "dhikrs": [
+      {
+        "id": "latenight-1",
+        "routineId": "latenight",
+        "routineEmoji": "🌌",
+        "order": 1,
+        "type": "fixed",
+        "count": 100,
+        "title": {
+          "arabic": "استغفار الليل والتوبة",
+          "tamil": "அஸ்தஃபிருல்லாஹ் - ஆன்மீக அடித்தளம்",
+          "english": "Astaghfirullah - Spiritual Base & Connection",
+          "pronunciation": "Astaghfirullah al-Azeem"
+        },
+        "content": {
+          "arabic": "أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ",
+          "tamil": "மகத்தானவனாகிய அல்லாஹ்விடம் மன்னிப்புக் கோருகிறேன், அவனைத் தவிர வேறு இறைவன் இல்லை, அவன் எப்போதும் உயிருடன் இருப்பவன், பிரபஞ்சத்தை நிர்வகிப்பவன்; அவனிடமே தவ்பா செய்து மீளுகிறேன்.",
+          "english": "I seek forgiveness from Allah the Magnificent, whom there is no deity except Him, the Ever-Living, the Sustainer of all existence, and I turn to Him in repentance.",
+          "pronunciation": "Astaghfirullahal-'Azeem alladhi la ilaha illa Huwal-Hayyul-Qayyumu wa atoobu ilayh.",
+          "meaning": "Phase 1: Aanmeega Base & Connection — 20 Mins. Purification of minor errors accumulated during the day before the deep spiritual session.",
+          "source": "Sunan Abi Dawud 1517 / Jami` at-Tirmidhi 3577"
+        }
+      },
+      {
+        "id": "latenight-2",
+        "routineId": "latenight",
+        "routineEmoji": "🌌",
+        "order": 2,
+        "type": "fixed",
+        "count": 100,
+        "title": {
+          "arabic": "الصلاة الإبراهيمية",
+          "tamil": "துரூத் ஷரீஃப் (ஸல்லல்லாஹு அலைஹி வஸல்லம்)",
+          "english": "Durood Sharif (Sallallahu Alaihi Wasallam)",
+          "pronunciation": "Salawat Ibrahimiya"
+        },
+        "content": {
+          "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          "tamil": "யா அல்லாஹ்! இப்ராஹீம் (அலை) அவர்கள் மீதும், அவரது குடும்பத்தினர் மீதும் நீ அருள் புரிந்ததைப் போல், முஹம்மது (ஸல்) அவர்கள் மீதும், அவரது குடும்பத்தினர் மீதும் அருள் புரிவாயாக! நிச்சயமாக நீயே புகழுக்குரியவனாகவும், மகத்துவமிக்கவனாகவும் இருக்கிறாய்.",
+          "english": "O Allah, bestow Your blessings upon Muhammad and upon the family of Muhammad, as You bestowed blessings upon Ibrahim and upon the family of Ibrahim; indeed, You are Praiseworthy and Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; indeed, You are Praiseworthy and Glorious.",
+          "pronunciation": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammad, kama sallayta 'ala Ibrahima wa 'ala ali Ibrahim, innaka Hameedun Majeed. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammad, kama barakta 'ala Ibrahima wa 'ala ali Ibrahim, innaka Hameedun Majeed.",
+          "meaning": "Phase 1: Aanmeega Base & Connection — 20 Mins. Whoever sends blessings upon the Prophet ﷺ once, Allah sends ten blessings upon him.",
+          "source": "Sahih al-Bukhari 3370 / Sahih Muslim 405"
+        }
+      },
+      {
+        "id": "latenight-3",
+        "routineId": "latenight",
+        "routineEmoji": "🌌",
+        "order": 3,
+        "type": "fixed",
+        "count": 11,
+        "title": {
+          "arabic": "آية الكرسي",
+          "tamil": "ஆயத்துல் குர்ஸி - கட்டு அழிப்பான்",
+          "english": "Ayatul Kursi - The Kattu Destroyer",
+          "pronunciation": "Ayatul Kursi (Complete 2:255)"
+        },
+        "content": {
+          "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+          "tamil": "அல்லாஹ் — அவனைத் தவிர வணக்கத்திற்குரிய இறைவன் வேறு எவருமில்லை; அவன் என்றென்றும் உயிருள்ளவன்; பிரபஞ்சத்தை நிர்வகிப்பவன். அவனைச் சிறு தூக்கமோ, ஆழ்ந்த உறக்கமோ பீடிக்காது. வானங்களிலுள்ளவையும், பூமியிலுள்ளவையும் அவனுக்கே உரியன.",
+          "english": "Allah — there is no deity except Him, the Ever-Living, the Sustainer of all existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
+          "pronunciation": "Allahu la ilaha illa Huwal-Hayyul-Qayyum. La ta'khudhuhu sinatuw-wa la nawm. Lahu ma fis-samawati wa ma fil-ard. Man dhal-ladhi yashfa'u 'indahu illa bi-idhnih. Ya'lamu ma bayna aydeehim wa ma khalfahum, wa la yuheetoona bishay'im-min 'ilmihi illa bima sha'. Wasi'a kursiyyuhus-samawati wal-ard, wa la ya'ooduhu hifdhuhuma, wa Huwal-'Aliyyul-'Azeem.",
+          "meaning": "Phase 2: The Kattu Destroyer & Family Shield — 40 Mins. When recited, Allah appoints an angelic guardian over you, and no devil can approach you.",
+          "source": "Quran 2:255 / Sahih al-Bukhari 2311"
+        }
+      },
+      {
+        "id": "latenight-4",
+        "routineId": "latenight",
+        "routineEmoji": "🌌",
+        "order": 4,
+        "type": "fixed",
+        "count": 33,
+        "title": {
+          "arabic": "إبطال السحر (سورة يونس ٨١)",
+          "tamil": "சூரா யூனுஸ் 10:81 - சூனிய முறிவு",
+          "english": "Surah Yunus 10:81 - Black Magic Destroyer",
+          "pronunciation": "Ma ji'tum bihis-sihr"
+        },
+        "content": {
+          "arabic": "فَلَمَّا أَلْقَوْا قَالَ مُوسَىٰ مَا جِئْتُم بِهِ السِّحْرُ ۖ إِنَّ اللَّهَ سَيُبْطِلُهُ ۖ إِنَّ اللَّهَ لَا يُصْلِحُ عَمَلَ الْمُفْسِدِينَ",
+          "tamil": "நீங்கள் கொண்டு வந்தது சூனியம்/கட்டு; கண்டிப்பாக அல்லாஹ் அதை அழிப்பார். நிச்சயமாக அல்லாஹ் குழப்பவாதிகளின் செயலை ஒருபோதும் சீராக்க மாட்டான்.",
+          "english": "And when they had thrown, Moses said, \"What you have brought is magic. Indeed, Allah will expose its worthlessness. Indeed, Allah does not amend the work of corrupters.\"",
+          "pronunciation": "Falamma alqaw qala Moosa ma ji'tum bihis-sihr. Innallaha sayubtiluh. Innallaha la yuslihu 'amalal-mufsideen.",
+          "meaning": "Phase 2: The Kattu Destroyer & Family Shield — 40 Mins. Powerful Quranic verse of Prophet Musa (AS) destroying sorcery, dark arts, and malice.",
+          "source": "Quran 10:81"
+        }
+      },
+      {
+        "id": "latenight-5",
+        "routineId": "latenight",
+        "routineEmoji": "🌌",
+        "order": 5,
+        "type": "fixed",
+        "count": 1,
+        "title": {
+          "arabic": "سورة البقرة (آخر آيتين ٢٨٥-٢٨٦)",
+          "tamil": "சூரா அல்-பகரா (கடைசி 2 ஆயத்துகள்)",
+          "english": "Surah Al-Baqarah (Last 2 Ayats - 285 & 286)",
+          "pronunciation": "Amanar-Rasoolu (2:285-286)"
+        },
+        "content": {
+          "arabic": "آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ ۝ لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ ۖ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا ۚ أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+          "tamil": "தூதர் தம் இறைவனிடமிருந்து தமக்கு அருளப்பட்டவற்றை நம்பிக்கை கொண்டார்; இறைநம்பிக்கையாளர்களும் (நம்பிக்கை கொண்டனர்). அனைவரும் அல்லாஹ்வையும், அவனது வானவர்களையும், அவனது வேதங்களையும், அவனது தூதர்களையும் நம்பிக்கை கொண்டனர்... (முழுமையாக ஓதவும்)",
+          "english": "The Messenger has believed in what was revealed to him from his Lord, and so have the believers. All of them have believed in Allah and His angels and His books and His messengers... Our Lord, do not impose blame upon us if we have forgotten or erred...",
+          "pronunciation": "Amanar-Rasoolu bima unzila ilayhi mir-Rabbihi wal-mu'minoon. Kullun amana billahi wa mala'ikatihi wa kutubihi wa rusulih...",
+          "meaning": "Phase 2: The Kattu Destroyer & Family Shield — 40 Mins. Whoever recites the last two verses of Surah Al-Baqarah at night, they will suffice him against all harm.",
+          "source": "Quran 2:285-286 / Sahih al-Bukhari 5009"
+        }
+      },
+      {
+        "id": "latenight-6",
+        "routineId": "latenight",
+        "routineEmoji": "🌌",
+        "order": 6,
+        "type": "fixed",
+        "count": 100,
+        "title": {
+          "arabic": "يا قهار يا جبار",
+          "tamil": "யா கஹ்ஹார், யா ஜப்பார் - ஆன்மீக உச்சம்",
+          "english": "Ya Qahhar, Ya Jabbar - Spiritual Peak & Supreme Power",
+          "pronunciation": "Ya Qahhar, Ya Jabbar"
+        },
+        "content": {
+          "arabic": "يَا قَهَّارُ، يَا جَبَّارُ",
+          "tamil": "அடக்கி ஆளுபவனே, மிகப் பெரிய ஆற்றலுடையவனே!",
+          "english": "O Subduer (of all), O Compeller (the Irresistible)!",
+          "pronunciation": "Ya Qahhar, Ya Jabbar.",
+          "meaning": "Phase 3: Aanmeega Ucham (Spiritual Peak) & Supreme Power — 20 Mins. Invoking Allah's names of absolute power to crush all spiritual and worldly obstacles.",
+          "source": "Asmaul Husna (Quran 59:23, 13:16)"
+        }
+      },
+      {
+        "id": "latenight-7",
+        "routineId": "latenight",
+        "routineEmoji": "🌌",
+        "order": 7,
+        "type": "fixed",
+        "count": 33,
+        "title": {
+          "arabic": "يا حي يا قيوم برحمتك أستغيث",
+          "tamil": "யா ஹய்யு யா கய்யூம் - ஆன்மீக உச்சம்",
+          "english": "Ya Hayyu Ya Qayyum - Spiritual Peak",
+          "pronunciation": "Ya Hayyu Ya Qayyum birahmatika astagheeth"
+        },
+        "content": {
+          "arabic": "يَا حَيُّ يَا قَيُّومُ، بِرَحْمَتِكَ أَسْتَغِيثُ",
+          "tamil": "என்றும் உயிரோடு இருப்பவனே, நிலையானவனே, உன் அருளைக் கொண்டு உதவி தேடுகிறேன்.",
+          "english": "O Ever-Living, O Sustainer of all, by Your mercy I seek relief.",
+          "pronunciation": "Ya Hayyu Ya Qayyum, birahmatika astagheeth.",
+          "meaning": "Phase 3: Aanmeega Ucham (Spiritual Peak) & Supreme Power — 20 Mins. The Prophet ﷺ used to frequently invoke Allah by these two greatest names.",
+          "source": "Jami` at-Tirmidhi 3524 / Mustadrak al-Hakim"
+        }
+      },
+      {
+        "id": "latenight-8",
+        "routineId": "latenight",
+        "routineEmoji": "🌌",
+        "order": 8,
+        "type": "fixed",
+        "count": 1,
+        "title": {
+          "arabic": "سورة الملك (كاملة)",
+          "tamil": "சூரா அல்-முல்க் - இறுதி சீலிங் & கிளியரிங்",
+          "english": "Surah Al-Mulk - Final Sealing & System Clearing",
+          "pronunciation": "Surah Al-Mulk (Complete)"
+        },
+        "content": {
+          "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝ تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ ۝ الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا ۚ وَهُوَ الْعَزِيزُ الْغَفُورُ",
+          "tamil": "அளவற்ற அருளாளனும் நிகரற்ற அன்புடையோனுமாகிய அல்லாஹ்வின் திருப்பெயரால் (துவங்குகிறேன்). எவன் கையில் ஆட்சி அதிகாரம் இருக்கிறதோ அவன் மிக்க பாக்கியமுள்ளவன்; அவன் எல்லாவற்றின் மீதும் ஆற்றலுடையவன்... (முழு சூராவையும் ஓதவும்)",
+          "english": "In the name of Allah, the Entirely Merciful, the Especially Merciful. Blessed is He in whose hand is dominion, and He is over all things competent. He who created death and life to test you as to which of you is best in deed... (Recite the complete Surah)",
+          "pronunciation": "Bismillahir-Rahmanir-Raheem. Tabarakal-ladhi biyadihil-mulku wa Huwa 'ala kulli shay'in Qadeer. Alladhi khalaqal-mawta wal-hayata liyabluwakum ayyukum ahsanu 'amala, wa Huwal-'Azeezul-Ghafoor...",
+          "meaning": "Phase 4: Final Sealing & Clearing the System — 10 Mins. Surah Al-Mulk intercedes for its reciter and protects from the punishment of the grave.",
+          "source": "Quran 67:1-30 / Jami` at-Tirmidhi 2891"
+        }
+      }
+    ]
   }
 ];
 

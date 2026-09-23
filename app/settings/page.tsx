@@ -52,6 +52,7 @@ const sections = {
     daytimeReminder: 'பகல் திக்ர் நினைவூட்டல்',
     eveningReminder: 'மாலை திக்ர் நினைவூட்டல்',
     nightReminder: 'இரவு திக்ர் நினைவூட்டல்',
+    latenightReminder: 'இஷா திக்ர் நினைவூட்டல்',
     hourlyReminder: 'மணிநேர நினைவூட்டல்',
     hourlyDesc: 'வழக்கமான இடைவெளிகளில் சுருக்கமான திக்ர் நினைவூட்டல்',
     every1Hour: '1 மணிநேரம்',
@@ -95,6 +96,7 @@ const sections = {
     daytimeReminder: 'تذكير أذكار النهار',
     eveningReminder: 'تذكير أذكار المساء',
     nightReminder: 'تذكير أذكار الليل',
+    latenightReminder: 'تذكير أذكار العشاء',
     hourlyReminder: 'تذكير كل ساعة',
     hourlyDesc: 'تنبيه دوري لأخذ لحظة ذكر مباركة',
     every1Hour: 'كل ساعة',
@@ -138,6 +140,7 @@ const sections = {
     daytimeReminder: 'Daytime Dhikr Reminder',
     eveningReminder: 'Evening Dhikr Reminder',
     nightReminder: 'Night Dhikr Reminder',
+    latenightReminder: 'Isha Dhikr Reminder',
     hourlyReminder: 'Hourly Reminder',
     hourlyDesc: 'Periodic prompts to remember Allah',
     every1Hour: '1 Hour',
@@ -336,6 +339,7 @@ export default function SettingsPage() {
     { id: 'daytime', label: s.daytimeReminder, icon: '☀️' },
     { id: 'evening', label: s.eveningReminder, icon: '🌇' },
     { id: 'night', label: s.nightReminder, icon: '🌆' },
+    { id: 'latenight', label: s.latenightReminder, icon: '🌌' },
   ];
 
   const nextReminder = calculateNextReminder(schedules, hourlyConfig);

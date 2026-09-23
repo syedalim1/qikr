@@ -23,7 +23,7 @@ export interface Dhikr {
   order?: number;
 }
 
-export type RoutineId = 'morning' | 'daytime' | 'evening' | 'night';
+export type RoutineId = 'morning' | 'daytime' | 'evening' | 'night' | 'latenight';
 
 export interface Routine {
   id: RoutineId;

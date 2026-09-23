@@ -92,7 +92,15 @@ export const DEFAULT_SCHEDULES: RoutineSchedule[] = [
   {
     routineId: 'night',
     enabled: true,
-    startTime: '21:00',
+    startTime: '19:00',
+    reminderEnabled: true,
+    daysOfWeek: [0, 1, 2, 3, 4, 5, 6],
+    updatedAt: '2026-01-01T00:00:00.000Z',
+  },
+  {
+    routineId: 'latenight',
+    enabled: true,
+    startTime: '21:30',
     reminderEnabled: true,
     daysOfWeek: [0, 1, 2, 3, 4, 5, 6],
     updatedAt: '2026-01-01T00:00:00.000Z',
