@@ -68,9 +68,9 @@ const emptySubMessages = {
 
 const routineEmojis: Record<RoutineId, string> = {
   morning: '🌅',
-  daytime: '🏭',
+  daytime: '☀️',
   evening: '🌇',
-  night: '🌌',
+  night: '🌆',
 };
 
 function getRoutineLabel(routineId: RoutineId, lang: 'ta' | 'ar' | 'en'): string {

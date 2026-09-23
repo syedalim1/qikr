@@ -333,9 +333,9 @@ export default function SettingsPage() {
 
   const routineMeta: { id: RoutineId; label: string; icon: string }[] = [
     { id: 'morning', label: s.morningReminder, icon: '🌅' },
-    { id: 'daytime', label: s.daytimeReminder, icon: '🏭' },
+    { id: 'daytime', label: s.daytimeReminder, icon: '☀️' },
     { id: 'evening', label: s.eveningReminder, icon: '🌇' },
-    { id: 'night', label: s.nightReminder, icon: '🌌' },
+    { id: 'night', label: s.nightReminder, icon: '🌆' },
   ];
 
   const nextReminder = calculateNextReminder(schedules, hourlyConfig);
